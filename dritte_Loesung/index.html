@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3. Lösung: Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Rock Paper Scissors</h1>
+      <h2>Choose your weaopn</h2>
+
+      <article>
+        <p class="you-choose"></p>
+        <p class="CPU-chooses"></p>
+        <p class="result"></p>
+      </article>
+
+      <div>
+        <img
+          id="schere"
+          onclick="play('scissors')"
+          src="./assets/img/schere.png"
+          alt="schere"
+        />
+        <img
+          onclick="play('rock')"
+          class="stein"
+          src="./assets/img/stein.png"
+          alt="stein"
+        />
+        <img
+          onclick="play('paper')"
+          class="papier"
+          src="./assets/img/papier.png"
+          alt=""
+        />
+      </div>
+
+      <a onclick="restart()" href="">restart game</a>
+    </header>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
