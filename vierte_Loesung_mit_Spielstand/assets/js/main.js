@@ -4,7 +4,9 @@
 const youChooseOutput = document.querySelector(".you-choose");
 const CPUChooseOutput = document.querySelector(".CPU-chooses");
 const resultOutput = document.querySelector(".result");
-const spielstandOutput = document.querySelector(".spielstand");
+const yourPointsOutput = document.querySelector(".your-points");
+const cpuPointsOutput = document.querySelector(".cpu-points");
+const roundsOutput = document.querySelector(".rounds");
 const finalWinner = document.querySelector(".final-winner");
 
 //! Array für Computer-Input:
@@ -51,7 +53,9 @@ const play = (playerChoice) => {
   // Output im HTML der gewählten Objekte und der Punkte:
   youChooseOutput.innerHTML = `You choose: ${playerChoice}`;
   CPUChooseOutput.innerHTML = `CPU chooses: ${computerChoice}`;
-  spielstandOutput.innerHTML = `Your points: ${userPoints} | CPU's points: ${cpuPoints} | Rounds: ${rounds}`;
+  yourPointsOutput.innerHTML = `Your points: ${userPoints}`;
+  cpuPointsOutput.innerHTML = `CPU's points: ${cpuPoints}`;
+  roundsOutput.innerHTML = `Rounds: ${rounds}`;
 
   // Ergänzung: ab 5 erreichten Punkten soll finaler Gewinner oder Verlierer ausgegeben werden:
   if (userPoints === 5) {
