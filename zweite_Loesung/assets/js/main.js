@@ -22,25 +22,22 @@ const play = (playerChoice) => {
   console.log(computerChoice);
   console.log(playerChoice);
 
+  youChooseOutput.innerHTML = `You choose: ${playerChoice}`;
+  CPUChooseOutput.innerHTML = `CPU chooses: ${computerChoice}`;
+
   if (playerChoice === computerChoice) {
-    youChooseOutput.innerHTML = `You choose: ${playerChoice}`;
-    CPUChooseOutput.innerHTML = `CPU chooses: ${computerChoice}`;
     resultOutput.innerHTML = "Result: draw";
   } else if (
     (playerChoice === "rock" && computerChoice === "paper") ||
     (playerChoice === "paper" && computerChoice === "scissors") ||
     (playerChoice === "scissors" && computerChoice === "rock")
   ) {
-    youChooseOutput.innerHTML = `You choose: ${playerChoice}`;
-    CPUChooseOutput.innerHTML = `CPU chooses: ${computerChoice}`;
     resultOutput.innerHTML = "Result: You lose";
   } else if (
     (playerChoice === "paper" && computerChoice === "rock") ||
     (playerChoice === "scissors" && computerChoice === "paper") ||
     (playerChoice === "rock" && computerChoice === "scissors")
   ) {
-    youChooseOutput.innerHTML = `You choose: ${playerChoice}`;
-    CPUChooseOutput.innerHTML = `CPU chooses: ${computerChoice}`;
     resultOutput.innerHTML = "Result: You win";
   } else {
     resultOutput.innerHTML = "Bitte wähle ein Element aus.";

@@ -1,4 +1,4 @@
-//# 4. Lösung
+//# 4. Lösung mit Spielstand-Anzeige
 
 //! Output-Felder:
 const youChooseOutput = document.querySelector(".you-choose");
@@ -21,8 +21,6 @@ const play = (playerChoice) => {
   const computerChoice = choices[Math.floor(Math.random() * 3)];
 
   if (playerChoice === computerChoice) {
-    youChooseOutput.innerHTML = `You choose: ${playerChoice}`;
-    CPUChooseOutput.innerHTML = `CPU chooses: ${computerChoice}`;
     resultOutput.innerHTML = "Result: draw";
     // Rundenzählung:
     rounds += 1;
@@ -31,8 +29,6 @@ const play = (playerChoice) => {
     (playerChoice === "paper" && computerChoice === "scissors") ||
     (playerChoice === "scissors" && computerChoice === "rock")
   ) {
-    youChooseOutput.innerHTML = `You choose: ${playerChoice}`;
-    CPUChooseOutput.innerHTML = `CPU chooses: ${computerChoice}`;
     resultOutput.innerHTML = "Result: You lose";
 
     // Runden- und CPU-Punktezählung:
@@ -43,8 +39,6 @@ const play = (playerChoice) => {
     (playerChoice === "scissors" && computerChoice === "paper") ||
     (playerChoice === "rock" && computerChoice === "scissors")
   ) {
-    youChooseOutput.innerHTML = `You choose: ${playerChoice}`;
-    CPUChooseOutput.innerHTML = `CPU chooses: ${computerChoice}`;
     resultOutput.innerHTML = "Result: You win";
 
     // Runden- und Deine-Punktezählung:
@@ -63,7 +57,7 @@ const play = (playerChoice) => {
   if (userPoints === 5) {
     finalWinner.innerHTML = "You are the final winner! 🥳";
   } else if (cpuPoints === 5) {
-    finalWinner.innerHTML = `You lost 😔 Try again and restart the game?`;
+    finalWinner.innerHTML = `You lost 😔 Wanna have another try? Restart the game!`;
   } else {
   }
 };
